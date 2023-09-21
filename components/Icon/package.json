@@ -1,6 +1,6 @@
 {
   "name": "@iampava-devtools-ds/icon",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist",
@@ -33,7 +33,7 @@
   "dependencies": {
     "@babel/runtime": "7.7.2",
     "@design-systems/utils": "2.12.0",
-    "@iampava-devtools-ds/themes": "link:../../packages/themes",
+    "@iampava-devtools-ds/themes": "^1.2.4",
     "clsx": "1.1.0"
   },
   "peerDependencies": {
@@ -51,5 +51,5 @@
   "devDependencies": {
     "@design-systems/svg-icon-builder": "2.12.0"
   },
-  "gitHead": "abfe550409142712633f50144b35102a0e62e43f"
+  "gitHead": "52b06095371507f2dd085c4f624b8a6f5ac7b2a5"
 }

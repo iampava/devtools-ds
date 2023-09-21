@@ -1,6 +1,6 @@
 {
   "name": "@iampava-devtools-ds/diagnostic",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist",
@@ -31,8 +31,8 @@
   },
   "dependencies": {
     "@babel/runtime": "7.7.2",
-    "@iampava-devtools-ds/icon": "link:../Icon",
-    "@iampava-devtools-ds/themes": "link:../../packages/themes",
+    "@iampava-devtools-ds/icon": "^1.2.4",
+    "@iampava-devtools-ds/themes": "^1.2.4",
     "@reach/auto-id": "0.12.1",
     "@reach/visually-hidden": "0.12.0",
     "clsx": "1.1.0",
@@ -54,5 +54,5 @@
     "@types/color": "3.0.1",
     "color": "3.1.3"
   },
-  "gitHead": "abfe550409142712633f50144b35102a0e62e43f"
+  "gitHead": "52b06095371507f2dd085c4f624b8a6f5ac7b2a5"
 }
