@@ -5,8 +5,12 @@ import {
   SupportedTypes,
   ASTNode,
   ResolvedASTNode,
-} from "@devtools-ds/object-parser";
-import { ThemeableElement, useTheme, ThemeProvider } from "@devtools-ds/themes";
+} from "@iampava-devtools-ds/object-parser";
+import {
+  ThemeableElement,
+  useTheme,
+  ThemeProvider,
+} from "@iampava-devtools-ds/themes";
 import ObjectInspectorItem from "./ObjectInspectorItem";
 
 import styles from "./ObjectInspector.css";
@@ -16,28 +20,23 @@ interface ObjectInspectorProps
   /** JSON data to render in the tree. */
   data: SupportedTypes;
   /** Depth of the tree that is open at first render. */
-  expandLevel: number;
+  expandLevel?: number;
   /** Whether to sort keys like the browsers do. */
-  sortKeys: boolean;
+  sortKeys?: boolean;
   /** Whether to include object Prototypes */
-  includePrototypes: boolean;
+  includePrototypes?: boolean;
   /** Callback when a particular node in the tree is actively selected */
   onSelect?: (node?: ASTNode | ResolvedASTNode) => void;
 }
 
 /** An emulation of browsers JSON object inspector. */
-export const ObjectInspector = (props: ObjectInspectorProps) => {
-  const {
-    data,
-    expandLevel,
-    sortKeys,
-    includePrototypes,
-    className,
-    theme,
-    colorScheme,
-    onSelect,
-    ...html
-  } = props;
+export const ObjectInspector = ({
+  expandLevel = 0,
+  sortKeys = true,
+  includePrototypes = true,
+  ...rest
+}: ObjectInspectorProps) => {
+  const { data, className, theme, colorScheme, onSelect, ...html } = rest;
   const [ast, setAST] = useState<ASTNode | undefined>(undefined);
   const { themeClass, currentTheme, currentColorScheme } = useTheme(
     { theme, colorScheme },
@@ -70,12 +69,6 @@ export const ObjectInspector = (props: ObjectInspectorProps) => {
       )}
     </div>
   );
-};
-
-ObjectInspector.defaultProps = {
-  expandLevel: 0,
-  sortKeys: true,
-  includePrototypes: true,
 };
 
 export default ObjectInspector;

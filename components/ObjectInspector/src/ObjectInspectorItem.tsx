@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Tree } from "@devtools-ds/tree";
-import { ResolvedASTNode, ASTNode } from "@devtools-ds/object-parser";
+import { Tree } from "@iampava-devtools-ds/tree";
+import { ResolvedASTNode, ASTNode } from "@iampava-devtools-ds/object-parser";
 import ObjectValue from "./ObjectValue";
 import ObjectLabel from "./ObjectLabel";
 
@@ -16,8 +16,12 @@ interface ObjectInspectorItemProps {
 }
 
 /** A simple component. */
-export const ObjectInspectorItem = (props: ObjectInspectorItemProps) => {
-  const { ast, expandLevel, depth } = props;
+export const ObjectInspectorItem = ({
+  expandLevel = 0,
+  depth = 0,
+  ...rest
+}: ObjectInspectorItemProps) => {
+  const { ast } = rest;
 
   const [resolved, setResolved] = useState<ResolvedASTNode | undefined>();
   const [open, setOpen] = useState(Boolean(depth < expandLevel));
@@ -47,7 +51,7 @@ export const ObjectInspectorItem = (props: ObjectInspectorItemProps) => {
         open={open}
         label={<ObjectLabel open={open} ast={resolved} />}
         onSelect={() => {
-          props.onSelect?.(ast);
+          rest.onSelect?.(ast);
         }}
         onUpdate={(value: boolean) => {
           setOpen(value);
@@ -60,7 +64,7 @@ export const ObjectInspectorItem = (props: ObjectInspectorItemProps) => {
               ast={child}
               depth={depth + 1}
               expandLevel={expandLevel}
-              onSelect={props.onSelect}
+              onSelect={rest.onSelect}
             />
           );
         })}
@@ -73,7 +77,7 @@ export const ObjectInspectorItem = (props: ObjectInspectorItemProps) => {
       hover={false}
       label={<ObjectValue ast={ast} />}
       onSelect={() => {
-        props.onSelect?.(ast);
+        rest.onSelect?.(ast);
       }}
     />
   );

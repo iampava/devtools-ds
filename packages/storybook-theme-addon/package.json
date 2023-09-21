@@ -1,5 +1,5 @@
 {
-  "name": "@devtools-ds/storybook-theme-addon",
+  "name": "@iampava-devtools-ds/storybook-theme-addon",
   "private": true,
   "version": "1.2.1",
   "main": "./dist/cjs/index.js",
@@ -33,7 +33,7 @@
   ],
   "dependencies": {
     "@babel/runtime": "7.11.2",
-    "@devtools-ds/themes": "link:../themes",
+    "@iampava-devtools-ds/themes": "link:../themes",
     "@storybook/addons": "^6.1.9",
     "@storybook/api": "^6.1.9",
     "@storybook/channels": "^6.1.9",

@@ -1,19 +1,19 @@
-# @devtools-ds/tree
+# @iampava-devtools-ds/tree
 
 A versatile expanding `Tree` component, with full keyboard navigation following the [Tree View Design Pattern](https://www.w3.org/TR/wai-aria-practices/examples/treeview/treeview-2/treeview-2a.html).
 
 ## Installation
 
 ```sh
-npm i @devtools-ds/tree
+npm i @iampava-devtools-ds/tree
 # or with yarn
-yarn add @devtools-ds/tree
+yarn add @iampava-devtools-ds/tree
 ```
 
 Then to use the component in your code just import it!
 
 ```js
-import { Tree } from "@devtools-ds/tree";
+import { Tree } from "@iampava-devtools-ds/tree";
 ```
 
 ## Accessibility Approach

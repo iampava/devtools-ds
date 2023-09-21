@@ -1,5 +1,5 @@
 {
-  "name": "@devtools-ds/monorepo",
+  "name": "@iampava-devtools-ds/monorepo",
   "private": true,
   "repository": "https://github.com/intuit/devtools-ds",
   "author": {
@@ -25,7 +25,8 @@
     "test": "ds test",
     "build": "lerna run build --stream",
     "build:storybook": "ds storybook build",
-    "size": "ds size"
+    "size": "ds size",
+    "publish-npm": "lerna publish"
   },
   "workspaces": [
     "components/*",

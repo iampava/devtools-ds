@@ -1,4 +1,4 @@
-import { ComponentTheme, firefox, chrome } from "@devtools-ds/themes";
+import { ComponentTheme, firefox, chrome } from "@iampava-devtools-ds/themes";
 
 const TreeTheme = (): ComponentTheme => ({
   firefox: {

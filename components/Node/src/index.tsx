@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeableElement, useTheme } from "@devtools-ds/themes";
+import { ThemeableElement, useTheme } from "@iampava-devtools-ds/themes";
 import makeClass from "clsx";
 import styles from "./Node.css";
 

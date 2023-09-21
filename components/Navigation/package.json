@@ -1,5 +1,5 @@
 {
-  "name": "@devtools-ds/navigation",
+  "name": "@iampava-devtools-ds/navigation",
   "version": "1.2.1",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -32,7 +32,7 @@
   "dependencies": {
     "@babel/runtime": "7.7.2",
     "@design-systems/utils": "2.12.0",
-    "@devtools-ds/themes": "link:../../packages/themes",
+    "@iampava-devtools-ds/themes": "link:../../packages/themes",
     "@reach/tabs": "0.12.1",
     "clsx": "1.1.0"
   },
@@ -40,7 +40,7 @@
     "react": ">= 16.8.6"
   },
   "devDependencies": {
-    "@devtools-ds/icon": "link:../Icon"
+    "@iampava-devtools-ds/icon": "link:../Icon"
   },
   "files": [
     "dist",

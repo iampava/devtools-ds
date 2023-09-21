@@ -1,19 +1,19 @@
-# @devtools-ds/node
+# @iampava-devtools-ds/node
 
 A component for rendering DOM Node style opening and closing HTML tags.
 
 ## Installation
 
 ```sh
-npm i @devtools-ds/node
+npm i @iampava-devtools-ds/node
 # or with yarn
-yarn add @devtools-ds/node
+yarn add @iampava-devtools-ds/node
 ```
 
 Then to use the component in your code just import it!
 
 ```js
-import { Node } from "@devtools-ds/node";
+import { Node } from "@iampava-devtools-ds/node";
 ```
 
 ## Usage

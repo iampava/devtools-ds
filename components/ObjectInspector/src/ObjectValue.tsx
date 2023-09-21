@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import makeClass from "clsx";
-import { ThemeableElement, useTheme } from "@devtools-ds/themes";
-import { ASTNode, isObject, getPromiseState } from "@devtools-ds/object-parser";
+import { ThemeableElement, useTheme } from "@iampava-devtools-ds/themes";
+import {
+  ASTNode,
+  isObject,
+  getPromiseState,
+} from "@iampava-devtools-ds/object-parser";
 import styles from "./ObjectInspector.css";
 
 interface ObjectValueProps extends ThemeableElement<"span"> {

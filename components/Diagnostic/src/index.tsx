@@ -1,9 +1,9 @@
 import React from "react";
-import { ThemeableElement, useTheme } from "@devtools-ds/themes";
+import { ThemeableElement, useTheme } from "@iampava-devtools-ds/themes";
 import makeClass from "clsx";
 import { useId } from "@reach/auto-id";
 import { VisuallyHidden } from "@reach/visually-hidden";
-import { ConsoleErrorIcon, WarningIcon } from "@devtools-ds/icon";
+import { ConsoleErrorIcon, WarningIcon } from "@iampava-devtools-ds/icon";
 import { DiagnosticSeverity } from "vscode-languageserver-types";
 
 import styles from "./Diagnostic.css";

@@ -1,19 +1,19 @@
-# @devtools-ds/dom-inspector
+# @iampava-devtools-ds/dom-inspector
 
-An emulation of the Chrome and Firefox DOM inspector, built on the `@devtools-ds/tree` component.
+An emulation of the Chrome and Firefox DOM inspector, built on the `@iampava-devtools-ds/tree` component.
 
 ## Installation
 
 ```sh
-npm i @devtools-ds/dom-inspector
+npm i @iampava-devtools-ds/dom-inspector
 # or with yarn
-yarn add @devtools-ds/dom-inspector
+yarn add @iampava-devtools-ds/dom-inspector
 ```
 
 ## Usage
 
 ```js
-import { DOMInspector } from "@devtools-ds/dom-inspector";
+import { DOMInspector } from "@iampava-devtools-ds/dom-inspector";
 ```
 
 ```js

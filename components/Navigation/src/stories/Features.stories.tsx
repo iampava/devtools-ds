@@ -10,7 +10,7 @@ import {
   SelectIcon,
   StylesIcon,
   OdometerIcon,
-} from "@devtools-ds/icon";
+} from "@iampava-devtools-ds/icon";
 import { Navigation } from "..";
 import notes from "../../README.md";
 

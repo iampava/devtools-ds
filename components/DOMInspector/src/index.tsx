@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import makeClass from "clsx";
-import { ThemeableElement, useTheme, ThemeProvider } from "@devtools-ds/themes";
-import { Tree } from "@devtools-ds/tree";
-import { Node as TreeNode } from "@devtools-ds/node";
+import {
+  ThemeableElement,
+  useTheme,
+  ThemeProvider,
+} from "@iampava-devtools-ds/themes";
+import { Tree } from "@iampava-devtools-ds/tree";
+import { Node as TreeNode } from "@iampava-devtools-ds/node";
 
 import styles from "./DOMInspector.css";
 

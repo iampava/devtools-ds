@@ -1,4 +1,4 @@
-# @devtools-ds/themes
+# @iampava-devtools-ds/themes
 
 Each of the UI components in this project contains themes for multiple browsers. These themes are built using the [postcss-themed](https://github.com/intuit/postcss-themed) package, which allows us to specify themes for multiple browsers in light and dark mode.
 
@@ -7,19 +7,19 @@ This package contains colors, types, and React utilities for using browser theme
 ## Installation
 
 ```sh
-npm i @devtools-ds/themes
+npm i @iampava-devtools-ds/themes
 # or with yarn
-yarn add @devtools-ds/themes
+yarn add @iampava-devtools-ds/themes
 ```
 
 ## Examples
 
 ### ThemeProvider
 
-You can use the `ThemeProvider` component to set the theme for all `@devtools-ds` components underneath it.
+You can use the `ThemeProvider` component to set the theme for all `@iampava-devtools-ds` components underneath it.
 
 ```js
-import { ThemeProvider } from "@devtools-ds/themes";
+import { ThemeProvider } from "@iampava-devtools-ds/themes";
 
 <ThemeProvider theme={"chrome"} colorScheme={"light"}>
   <YourApp />
@@ -28,7 +28,7 @@ import { ThemeProvider } from "@devtools-ds/themes";
 
 ### AutoThemeProvider
 
-We also provide an `AutoThemeProvider`, which will automatically set the theme and color scheme of `@devtools-ds` components based on the users browser and preferred color scheme.
+We also provide an `AutoThemeProvider`, which will automatically set the theme and color scheme of `@iampava-devtools-ds` components based on the users browser and preferred color scheme.
 
 ```jsx
 <AutoThemeProvider>
@@ -63,7 +63,7 @@ You can also have the `AutoThemeProvider` automatically change the background co
 If you want to build your own component that leverages the `ThemeProvider`, we have a hook that allows you to get the current theme.
 
 ```js
-import { useTheme } from "@devtools-ds/themes";
+import { useTheme } from "@iampava-devtools-ds/themes";
 
 const { currentTheme, currentColorScheme } = useTheme(
   { theme, colorScheme },
@@ -76,7 +76,7 @@ const { currentTheme, currentColorScheme } = useTheme(
 We have created a number of theme variables that have the common colors for different browsers. These are stored as JS objects. You can view the available variables in the `Browser Themes` story in Storybook.
 
 ```js
-import { chrome, firefox } from "@devtools-ds/themes";
+import { chrome, firefox } from "@iampava-devtools-ds/themes";
 
 chrome.light.gray01;
 firefox.dark.blue02;

@@ -1,4 +1,4 @@
-import { ComponentTheme, firefox, chrome } from "@devtools-ds/themes";
+import { ComponentTheme, firefox, chrome } from "@iampava-devtools-ds/themes";
 import color from "color";
 
 const TableTheme = (): ComponentTheme => ({

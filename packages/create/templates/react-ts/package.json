@@ -44,7 +44,7 @@
     "webpack-extension-reloader": "^1.1.4"
   },
   "dependencies": {
-    "@devtools-ds/port-controller": "0.133.0",
+    "@iampava-devtools-ds/port-controller": "0.133.0",
     "auto": "^10.5.0",
     "change-case": "^4.1.2",
     "clsx": "^1.1.1",

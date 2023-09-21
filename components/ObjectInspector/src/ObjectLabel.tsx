@@ -1,6 +1,6 @@
 import React from "react";
 import makeClass from "clsx";
-import { ThemeableElement, useTheme, Theme } from "@devtools-ds/themes";
+import { ThemeableElement, useTheme, Theme } from "@iampava-devtools-ds/themes";
 import {
   ResolvedASTNode,
   ResolvedASTArray,
@@ -9,7 +9,7 @@ import {
   ResolvedASTPromise,
   ResolvedASTMap,
   ASTNode,
-} from "@devtools-ds/object-parser";
+} from "@iampava-devtools-ds/object-parser";
 import ObjectValue from "./ObjectValue";
 import styles from "./ObjectInspector.css";
 

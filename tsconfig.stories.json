@@ -8,7 +8,7 @@
     // Monorepo support
     "baseUrl": ".",
     "paths": {
-      "@devtools-ds/*": ["components/*/src", "packages/*/src"]
+      "@iampava-devtools-ds/*": ["components/*/src", "packages/*/src"]
     }
   }
 }

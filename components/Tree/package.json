@@ -1,5 +1,5 @@
 {
-  "name": "@devtools-ds/tree",
+  "name": "@iampava-devtools-ds/tree",
   "version": "1.2.1",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@babel/runtime": "7.7.2",
-    "@devtools-ds/themes": "link:../../packages/themes",
+    "@iampava-devtools-ds/themes": "link:../../packages/themes",
     "clsx": "1.1.0"
   },
   "peerDependencies": {

@@ -1,8 +1,8 @@
 import React from "react";
 import { useAddonState, useParameter } from "@storybook/api";
 import { useAddonState as useClientAddonState } from "@storybook/client-api";
-import { Theme, ColorScheme, ThemeProvider } from "@devtools-ds/themes";
-import { chrome, firefox } from "@devtools-ds/themes";
+import { Theme, ColorScheme, ThemeProvider } from "@iampava-devtools-ds/themes";
+import { chrome, firefox } from "@iampava-devtools-ds/themes";
 import {
   IconButton,
   WithTooltip,

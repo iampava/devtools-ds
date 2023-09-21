@@ -1,5 +1,5 @@
 import React, { ReactNode, useState, useEffect } from "react";
-import { ThemeableElement, useTheme } from "@devtools-ds/themes";
+import { ThemeableElement, useTheme } from "@iampava-devtools-ds/themes";
 import makeClass from "clsx";
 import TreeContext from "./TreeContext";
 import styles from "./Tree.css";
@@ -8,9 +8,9 @@ export interface TreeProps extends ThemeableElement<"ul"> {
   /** The label for this node */
   label: string | ReactNode;
   /** Whether this node is open */
-  open: boolean;
+  open?: boolean;
   /** Whether to add hover styles to children */
-  hover: boolean;
+  hover?: boolean;
   /** Send state updates so parent can track them */
   onUpdate?: (value: boolean) => void;
   /**
@@ -21,19 +21,17 @@ export interface TreeProps extends ThemeableElement<"ul"> {
 }
 
 /** A keyboard accessible expanding tree view. */
-export const Tree = (props: TreeProps) => {
+export const Tree = ({ open = false, hover = true, ...rest }: TreeProps) => {
   const {
     theme,
-    hover,
     colorScheme,
     children,
     label,
     className,
     onUpdate,
     onSelect,
-    open,
     ...html
-  } = props;
+  } = rest;
 
   const { themeClass, currentTheme } = useTheme({ theme, colorScheme }, styles);
 
@@ -282,7 +280,7 @@ export const Tree = (props: TreeProps) => {
         <TreeContext.Provider
           value={{ isChild: true, depth: 0, hasHover: showHover }}
         >
-          <Tree {...props} />
+          <Tree {...rest} open={open} hover={hover} />
         </TreeContext.Provider>
       </ul>
     );
@@ -347,9 +345,4 @@ export const Tree = (props: TreeProps) => {
       </ul>
     </li>
   );
-};
-
-Tree.defaultProps = {
-  open: false,
-  hover: true,
 };

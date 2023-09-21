@@ -1,5 +1,5 @@
 {
-  "name": "@devtools-ds/table",
+  "name": "@iampava-devtools-ds/table",
   "version": "1.2.1",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -31,7 +31,7 @@
   "dependencies": {
     "@babel/runtime": "7.7.2",
     "@design-systems/utils": "2.12.0",
-    "@devtools-ds/themes": "link:../../packages/themes",
+    "@iampava-devtools-ds/themes": "link:../../packages/themes",
     "clsx": "1.1.0",
     "use-resize-observer": "6.1.0"
   },

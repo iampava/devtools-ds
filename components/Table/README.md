@@ -1,19 +1,19 @@
-# @devtools-ds/table
+# @iampava-devtools-ds/table
 
 A flexible table component, modeled after the network inspector in Chrome and FireFox.
 
 ## Installation
 
 ```sh
-npm i @devtools-ds/table
+npm i @iampava-devtools-ds/table
 # or with yarn
-yarn add @devtools-ds/table
+yarn add @iampava-devtools-ds/table
 ```
 
 Then to use the component in your code just import it!
 
 ```js
-import { Table } from "@devtools-ds/table";
+import { Table } from "@iampava-devtools-ds/table";
 ```
 
 ## Accessibility Approach
@@ -26,7 +26,7 @@ the view changes on move without the user selecting a new node, and tab vs. arro
 ## Usage
 
 ```js
-import { Table } from "@devtools-ds/table";
+import { Table } from "@iampava-devtools-ds/table";
 
 export const BasicUsage = () => {
   const [selected, setSelected] = React.useState("");
@@ -81,6 +81,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

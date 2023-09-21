@@ -10,7 +10,7 @@ import {
   TabsKeyboardActivation,
   useTabsContext,
 } from "@reach/tabs";
-import { useTheme, ThemeableElement } from "@devtools-ds/themes";
+import { useTheme, ThemeableElement } from "@iampava-devtools-ds/themes";
 import { styled, Element } from "@design-systems/utils";
 import styles from "./Navigation.css";
 

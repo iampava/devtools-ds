@@ -1,13 +1,13 @@
-# @devtools-ds/icon
+# @iampava-devtools-ds/icon
 
 A set of React-packaged SVG icons commonly used in developer tools.
 
 ## Installation
 
 ```sh
-npm i @devtools-ds/icon
+npm i @iampava-devtools-ds/icon
 # or with yarn
-yarn add @devtools-ds/icon
+yarn add @iampava-devtools-ds/icon
 ```
 
 ### Accessibility Approach
@@ -19,7 +19,7 @@ By default, all icons are set to `aria-hidden` and `focusable="false"` in order 
 Icons are packaged as individual React components.
 
 ```jsx
-import { AlertIcon } from "@devtools-ds/icon";
+import { AlertIcon } from "@iampava-devtools-ds/icon";
 
 // individual icon
 <AlertIcon />;
@@ -30,7 +30,7 @@ import { AlertIcon } from "@devtools-ds/icon";
 There are three ways to size the icons: a size prop, inline, or with width and height. I've included an example of each below.
 
 ```jsx
-import { AlertIcon } from '@devtools-ds/icon';
+import { AlertIcon } from '@iampava-devtools-ds/icon';
 
 // This will resize based on the four preset icon sizes used in the design system.
 <AlertIcon size="large"/>

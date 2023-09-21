@@ -1,13 +1,13 @@
-# @devtools-ds/object-inspector
+# @iampava-devtools-ds/object-inspector
 
 An emulation of the Chrome and Firefox object inspector, which allows you to view JavaScript objects in the console.
 
 ## Installation
 
 ```sh
-npm i @devtools-ds/object-inspector
+npm i @iampava-devtools-ds/object-inspector
 # or with yarn
-yarn add @devtools-ds/object-inspector
+yarn add @iampava-devtools-ds/object-inspector
 ```
 
 ## Supported Types
@@ -42,7 +42,7 @@ For types it doesn't know about, the component should try to find a name or stri
 Then to use the component in your code just import it!
 
 ```js
-import { ObjectInspector } from "@devtools-ds/object-inspector";
+import { ObjectInspector } from "@iampava-devtools-ds/object-inspector";
 
 const data = {
   string: "string",
@@ -57,7 +57,7 @@ const data = {
 
 `onSelect`
 
-This function is called with the selected AST node (after parsing the `data` prop with `@devtools-ds/object-parser`). With the selected node, you're able to traverse up/down the tree, and act on the currently selected node (like displaying additional details about that property).
+This function is called with the selected AST node (after parsing the `data` prop with `@iampava-devtools-ds/object-parser`). With the selected node, you're able to traverse up/down the tree, and act on the currently selected node (like displaying additional details about that property).
 
 ## FAQ
 

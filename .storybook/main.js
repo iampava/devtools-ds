@@ -12,7 +12,7 @@ const tsconfigPath = path.resolve(getMonorepoRoot(), "tsconfig.stories.json");
 
 module.exports = {
   stories,
-  addons: ["@devtools-ds/storybook-theme-addon", ...addons],
+  addons: ["@iampava-devtools-ds/storybook-theme-addon", ...addons],
   presets: [
     "@storybook/addon-docs/preset",
     path.join(__dirname, "./theme-preset.js"),

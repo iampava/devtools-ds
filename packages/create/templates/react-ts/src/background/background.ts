@@ -7,7 +7,7 @@ import {
   RUNTIME_SOURCE,
 } from "../constants";
 import { createLogger } from "../logger";
-import { PortController } from "@devtools-ds/port-controller";
+import { PortController } from "@iampava-devtools-ds/port-controller";
 
 const controller = new PortController<Message>();
 const logger = createLogger(BACKGROUND_SOURCE);

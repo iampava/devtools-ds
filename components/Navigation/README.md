@@ -1,13 +1,13 @@
-# @devtools-ds/navigation
+# @iampava-devtools-ds/navigation
 
 A navigation bar with tabs and icons, based on the tab navigation in browser inspectors.
 
 ## Installation
 
 ```sh
-npm i @devtools-ds/nav
+npm i @iampava-devtools-ds/nav
 # or with yarn
-yarn add @devtools-ds/nav
+yarn add @iampava-devtools-ds/nav
 ```
 
 ## Accessibility Approach
@@ -17,7 +17,7 @@ This component is a combination of a few user interaction patterns. At it's core
 ## Usage
 
 ```js
-import { Navigation } from "@devtools-ds/navigation";
+import { Navigation } from "@iampava-devtools-ds/navigation";
 
 export const BasicUsage = () => {
   return (
@@ -98,6 +98,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

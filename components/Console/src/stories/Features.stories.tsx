@@ -1,5 +1,5 @@
 import React from "react";
-import { callback } from "@devtools-ds/storybook-utils";
+import { callback } from "@iampava-devtools-ds/storybook-utils";
 
 import { Console, ConsoleExpression, ConsoleResultInspector } from "..";
 import notes from "../../README.md";

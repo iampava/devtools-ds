@@ -4,10 +4,10 @@ import {
   ConsoleResultIcon,
   WarningIcon,
   ConsoleErrorIcon,
-} from "@devtools-ds/icon";
-import { useTheme, ThemeableElement } from "@devtools-ds/themes";
+} from "@iampava-devtools-ds/icon";
+import { useTheme, ThemeableElement } from "@iampava-devtools-ds/themes";
 import makeClass from "clsx";
-import { ObjectInspector } from "@devtools-ds/object-inspector";
+import { ObjectInspector } from "@iampava-devtools-ds/object-inspector";
 
 import styles from "./Console.css";
 

@@ -1,13 +1,13 @@
-# @devtools-ds/diagnostic
+# @iampava-devtools-ds/diagnostic
 
 The `Diagnostic` component displays errors and warnings from code, similar to errors produced by tools like webpack. It can also be used to display errors produced by a [Language Server](https://code.visualstudio.com/api/language-extensions/language-server-extension-guide).
 
 ## Installation
 
 ```sh
-npm i @devtools-ds/diagnostic
+npm i @iampava-devtools-ds/diagnostic
 # or with yarn
-yarn add @devtools-ds/diagnostic
+yarn add @iampava-devtools-ds/diagnostic
 ```
 
 ## Accessibility Approach
@@ -18,7 +18,7 @@ There is an auto-generated caption describing the error in a screen-reader frien
 ## Usage
 
 ```jsx
-import { Diagnostic } from "@devtools-ds/diagnostic";
+import { Diagnostic } from "@iampava-devtools-ds/diagnostic";
 ```
 
 ### Basic Diagnostic

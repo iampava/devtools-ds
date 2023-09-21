@@ -13,7 +13,7 @@ import { version } from "../../package.json";
 
 <Meta title="Components/Console/Overview" parameters={{ notes }} />
 
-<Title>@devtools-ds/console</Title>
+<Title>@iampava-devtools-ds/console</Title>
 
 ---
 
@@ -51,8 +51,8 @@ You can also customize how the results are displayed.
 Provide a component with a `result` property and it will be used instead.
 
 In browsers, the console displays results using an `ObjectInspector`.
-This package exports a `ConsoleResultInspector` component which mirrors that behavior using `@devtools-ds/object-inspector`.
-We don't set it as the default `resultComponent` for performance reasons; that would cause `@devtools-ds/object-inspector` to always be imported even if you don't use it.
+This package exports a `ConsoleResultInspector` component which mirrors that behavior using `@iampava-devtools-ds/object-inspector`.
+We don't set it as the default `resultComponent` for performance reasons; that would cause `@iampava-devtools-ds/object-inspector` to always be imported even if you don't use it.
 
 ```tsx
 import {
@@ -60,7 +60,7 @@ import {
   ConsoleExpression,
   ConsoleResultInspector,
   ConsoleResultProps,
-} from "@devtools-ds/console";
+} from "@iampava-devtools-ds/console";
 
 /** A custom result component */
 export const ConsoleResultCustom = ({ result }: ConsoleResultProps) => {
@@ -70,7 +70,7 @@ export const ConsoleResultCustom = ({ result }: ConsoleResultProps) => {
 // Use the custom result component
 <Console resultComponent={ConsoleResultCustom} />
 
-// Use @devtools-ds/object-inspector
+// Use @iampava-devtools-ds/object-inspector
 <Console resultComponent={ConsoleResultInspector} />
 ```
 
