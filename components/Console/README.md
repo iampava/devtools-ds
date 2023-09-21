@@ -1,19 +1,19 @@
-# @devtools-ds/console
+# @iampava-devtools-ds/console
 
 The `Console` component emulates the familiar JavaScript REPL experience seen in many browsers. You can customize the function that executes the code, as well as how results are displayed.
 
 ## Installation
 
 ```sh
-npm i @devtools-ds/console
+npm i @iampava-devtools-ds/console
 # or with yarn
-yarn add @devtools-ds/console
+yarn add @iampava-devtools-ds/console
 ```
 
 Then to use the component in your code just import it!
 
 ```js
-import { Console } from "@devtools-ds/console";
+import { Console } from "@iampava-devtools-ds/console";
 ```
 
 ## Usage
@@ -31,8 +31,8 @@ You can also customize how the results are displayed.
 Provide a component with a `result` property and it will be used instead.
 
 In browsers, the console displays results using an `ObjectInspector`.
-This package exports a `ConsoleResultInspector` component which mirrors that behavior using `@devtools-ds/object-inspector`.
-We don't set it as the default `resultComponent` for performance reasons; that would cause `@devtools-ds/object-inspector` to always be imported even if you don't use it.
+This package exports a `ConsoleResultInspector` component which mirrors that behavior using `@iampava-devtools-ds/object-inspector`.
+We don't set it as the default `resultComponent` for performance reasons; that would cause `@iampava-devtools-ds/object-inspector` to always be imported even if you don't use it.
 
 ```tsx
 import {
@@ -40,7 +40,7 @@ import {
   ConsoleExpression,
   ConsoleResultInspector,
   ConsoleResultProps,
-} from "@devtools-ds/console";
+} from "@iampava-devtools-ds/console";
 
 /** A custom result component */
 export const ConsoleResultCustom = ({ result }: ConsoleResultProps) => {
@@ -50,7 +50,7 @@ export const ConsoleResultCustom = ({ result }: ConsoleResultProps) => {
 // Use the custom result component
 <Console resultComponent={ConsoleResultCustom} />
 
-// Use @devtools-ds/object-inspector
+// Use @iampava-devtools-ds/object-inspector
 <Console resultComponent={ConsoleResultInspector} />
 ```
 
@@ -93,6 +93,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

@@ -1,4 +1,4 @@
-# @devtools-ds/create
+# @iampava-devtools-ds/create
 
 This is a package of browser extension templates, which removes a majority of the usual boilerplate needed to get started. We're still working on adding more templates, and simplifying the developer experience. If you see an area to improve, feel free to contribute!
 
@@ -13,7 +13,7 @@ Goals for templates:
 ## Install a Template
 
 ```sh
-npm init @devtools-ds
+npm init @iampava-devtools-ds
 ```
 
 Instructions for development will be included in the `README.md` for your chosen template.

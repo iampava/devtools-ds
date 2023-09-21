@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeableElement, useTheme } from "@devtools-ds/themes";
+import { ThemeableElement, useTheme } from "@iampava-devtools-ds/themes";
 import makeClass from "clsx";
 import styles from "./Node.css";
 
@@ -11,24 +11,26 @@ interface NodeProps extends ThemeableElement<"ul"> {
   /** Toggle special node type styles */
   variant?: "comment" | "doctype";
   /** Whether the tag is a closing tag */
-  closing: boolean;
+  closing?: boolean;
   /** Whether this node is self-closing */
-  selfClosing: boolean;
+  selfClosing?: boolean;
 }
 
 /** An emulation of the browser inspector DOM node. */
-export const Node = (props: NodeProps) => {
+export const Node = ({
+  closing = false,
+  selfClosing = false,
+  ...rest
+}: NodeProps) => {
   const {
     name,
-    closing,
     properties,
-    selfClosing,
     theme,
     colorScheme,
     className,
     variant,
     ...html
-  } = props;
+  } = rest;
   const { themeClass, currentTheme } = useTheme({ theme, colorScheme }, styles);
   const docString = currentTheme === "chrome" ? "!doctype " : "!DOCTYPE ";
 
@@ -72,9 +74,4 @@ export const Node = (props: NodeProps) => {
       </span>
     </span>
   );
-};
-
-Node.defaultProps = {
-  closing: false,
-  selfClosing: false,
 };

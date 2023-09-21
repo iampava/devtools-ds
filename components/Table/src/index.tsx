@@ -1,7 +1,7 @@
 import React from "react";
 import makeClass from "clsx";
 import useResizeObserver from "use-resize-observer";
-import { useTheme, ThemeableElement } from "@devtools-ds/themes";
+import { useTheme, ThemeableElement } from "@iampava-devtools-ds/themes";
 import { styled, Element } from "@design-systems/utils";
 import styles from "./Table.css";
 

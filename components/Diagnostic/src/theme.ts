@@ -1,4 +1,4 @@
-import { ComponentTheme, chrome, firefox } from "@devtools-ds/themes";
+import { ComponentTheme, chrome, firefox } from "@iampava-devtools-ds/themes";
 import color from "color";
 
 const DiagnosticTheme = (): ComponentTheme => ({

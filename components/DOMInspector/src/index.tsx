@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import makeClass from "clsx";
-import { ThemeableElement, useTheme, ThemeProvider } from "@devtools-ds/themes";
-import { Tree } from "@devtools-ds/tree";
-import { Node as TreeNode } from "@devtools-ds/node";
+import {
+  ThemeableElement,
+  useTheme,
+  ThemeProvider,
+} from "@iampava-devtools-ds/themes";
+import { Tree } from "@iampava-devtools-ds/tree";
+import { Node as TreeNode } from "@iampava-devtools-ds/node";
 
 import styles from "./DOMInspector.css";
 
@@ -10,7 +14,7 @@ interface DOMInspectorProps extends ThemeableElement<"div"> {
   /** The DOM Element to render */
   data: Node;
   /** Depth of the tree that is open at first render. */
-  expandLevel: number;
+  expandLevel?: number;
 }
 
 interface DOMInspectorItemProps extends DOMInspectorProps {
@@ -125,8 +129,11 @@ export const getElementLabel = (
 };
 
 /** A component for rendering DOM items. */
-export const DOMInspectorItem = (props: DOMInspectorItemProps) => {
-  const { data, depth, expandLevel } = props;
+export const DOMInspectorItem = ({
+  expandLevel = 0,
+  ...rest
+}: DOMInspectorItemProps) => {
+  const { data, depth } = rest;
   const [open, setOpen] = useState(depth < expandLevel);
 
   const text = data.textContent?.trim();
@@ -234,8 +241,11 @@ export const DOMInspectorItem = (props: DOMInspectorItemProps) => {
 };
 
 /** An Inspector for DOM nodes and HTML Documents. */
-export const DOMInspector = (props: DOMInspectorProps) => {
-  const { data, theme, colorScheme, expandLevel, className, ...html } = props;
+export const DOMInspector = ({
+  expandLevel = 0,
+  ...rest
+}: DOMInspectorProps) => {
+  const { data, theme, colorScheme, className, ...html } = rest;
   const { themeClass, currentTheme, currentColorScheme } = useTheme(
     { theme, colorScheme },
     styles
@@ -250,8 +260,4 @@ export const DOMInspector = (props: DOMInspectorProps) => {
       </ThemeProvider>
     </div>
   );
-};
-
-DOMInspector.defaultProps = {
-  expandLevel: 0,
 };

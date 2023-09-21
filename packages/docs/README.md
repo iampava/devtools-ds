@@ -1,15 +1,15 @@
-# @devtools-ds/docs
+# @iampava-devtools-ds/docs
 
 Welcome to my `Docs` package.
 
 ## Installation
 
 ```sh
-npm i @devtools-ds/docs
+npm i @iampava-devtools-ds/docs
 # or with yarn
-yarn add @devtools-ds/docs
+yarn add @iampava-devtools-ds/docs
 ```
 
 ```js
-import Docs from "@devtools-ds/docs";
+import Docs from "@iampava-devtools-ds/docs";
 ```

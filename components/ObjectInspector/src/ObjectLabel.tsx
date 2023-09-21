@@ -1,6 +1,6 @@
 import React from "react";
 import makeClass from "clsx";
-import { ThemeableElement, useTheme, Theme } from "@devtools-ds/themes";
+import { ThemeableElement, useTheme, Theme } from "@iampava-devtools-ds/themes";
 import {
   ResolvedASTNode,
   ResolvedASTArray,
@@ -9,7 +9,7 @@ import {
   ResolvedASTPromise,
   ResolvedASTMap,
   ASTNode,
-} from "@devtools-ds/object-parser";
+} from "@iampava-devtools-ds/object-parser";
 import ObjectValue from "./ObjectValue";
 import styles from "./ObjectInspector.css";
 
@@ -17,9 +17,9 @@ interface ObjectLabelProps extends ThemeableElement<"span"> {
   /** Type of object. */
   ast: ResolvedASTNode;
   /** How many previews to render */
-  previewMax: number;
+  previewMax?: number;
   /** Whether the Object label is open */
-  open: boolean;
+  open?: boolean;
 }
 
 /** Build a list of previews */
@@ -166,16 +166,12 @@ const getSetLabel = (
 };
 
 /** Create a styled label for an object, with previews of the object contents. */
-export const ObjectLabel = (props: ObjectLabelProps) => {
-  const {
-    ast,
-    theme,
-    previewMax,
-    open,
-    colorScheme,
-    className,
-    ...html
-  } = props;
+export const ObjectLabel = ({
+  previewMax = 8,
+  open = false,
+  ...rest
+}: ObjectLabelProps) => {
+  const { ast, theme, colorScheme, className, ...html } = rest;
   const { themeClass, currentTheme } = useTheme({ theme, colorScheme }, styles);
   const isPrototype = ast.isPrototype || false;
   const classes = makeClass(styles.objectLabel, themeClass, className, {
@@ -249,11 +245,6 @@ export const ObjectLabel = (props: ObjectLabelProps) => {
       {getObjectLabel(ast, open, previewMax, currentTheme)}
     </span>
   );
-};
-
-ObjectLabel.defaultProps = {
-  previewMax: 8,
-  open: false,
 };
 
 export default ObjectLabel;

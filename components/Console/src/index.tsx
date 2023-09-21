@@ -4,10 +4,10 @@ import {
   ConsoleResultIcon,
   WarningIcon,
   ConsoleErrorIcon,
-} from "@devtools-ds/icon";
-import { useTheme, ThemeableElement } from "@devtools-ds/themes";
+} from "@iampava-devtools-ds/icon";
+import { useTheme, ThemeableElement } from "@iampava-devtools-ds/themes";
 import makeClass from "clsx";
-import { ObjectInspector } from "@devtools-ds/object-inspector";
+import { ObjectInspector } from "@iampava-devtools-ds/object-inspector";
 
 import styles from "./Console.css";
 
@@ -77,12 +77,11 @@ const ConsoleResult = (props: ConsoleExpression & ResultComponent) => {
 
 interface ConsoleChevronProps {
   /** The chevron changes colors if it's representing a focused input */
-  focused: boolean;
+  focused?: boolean;
 }
 
 /** The chevron for the console to use */
-const ConsoleChevron = (props: ConsoleChevronProps) => {
-  const { focused } = props;
+const ConsoleChevron = ({ focused = false }: ConsoleChevronProps) => {
   return (
     <ChevronRightIcon
       inline
@@ -91,10 +90,6 @@ const ConsoleChevron = (props: ConsoleChevronProps) => {
       })}
     />
   );
-};
-
-ConsoleChevron.defaultProps = {
-  focused: false,
 };
 
 interface ConsoleInputProps {
@@ -202,16 +197,18 @@ const useConsoleHistory = (
 };
 
 /** The Console component emulates a REPL environment that you see in browsers */
-export const Console = (props: ConsoleProps & ResultComponent) => {
+export const Console = ({
+  execute = (exp: string) => exp,
+  resultComponent: Result = ConsoleResultDefault,
+  ...rest
+}: ConsoleProps & ResultComponent) => {
   const {
-    execute,
     history: propsHistory,
-    resultComponent: Result,
     theme,
     colorScheme,
     className,
     ...html
-  } = props;
+  } = rest;
   const [history, setHistory] = useConsoleHistory(propsHistory);
 
   const { themeClass } = useTheme({ theme, colorScheme }, styles);
@@ -253,9 +250,4 @@ export const Console = (props: ConsoleProps & ResultComponent) => {
       />
     </div>
   );
-};
-
-Console.defaultProps = {
-  execute: (exp: string) => exp,
-  resultComponent: ConsoleResultDefault,
 };

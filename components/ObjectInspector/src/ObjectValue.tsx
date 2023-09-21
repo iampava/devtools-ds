@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
 import makeClass from "clsx";
-import { ThemeableElement, useTheme } from "@devtools-ds/themes";
-import { ASTNode, isObject, getPromiseState } from "@devtools-ds/object-parser";
+import { ThemeableElement, useTheme } from "@iampava-devtools-ds/themes";
+import {
+  ASTNode,
+  isObject,
+  getPromiseState,
+} from "@iampava-devtools-ds/object-parser";
 import styles from "./ObjectInspector.css";
 
 interface ObjectValueProps extends ThemeableElement<"span"> {
   /** Type of object. */
   ast: ASTNode;
   /** Whether or not to show the key */
-  showKey: boolean;
+  showKey?: boolean;
 }
 
 /**
@@ -44,8 +48,8 @@ const buildValue = (
 };
 
 /** Display a leaf key-value pair with appropriate styles. */
-export const ObjectValue = (props: ObjectValueProps) => {
-  const { ast, theme, showKey, colorScheme, className, ...html } = props;
+export const ObjectValue = ({ showKey = true, ...rest }: ObjectValueProps) => {
+  const { ast, theme, colorScheme, className, ...html } = rest;
   const { themeClass } = useTheme({ theme, colorScheme }, styles);
   const [asyncValue, setAsyncValue] = useState(<span />);
   let value = <span />;
@@ -185,10 +189,6 @@ export const ObjectValue = (props: ObjectValueProps) => {
       {value}
     </span>
   );
-};
-
-ObjectValue.defaultProps = {
-  showKey: true,
 };
 
 export default ObjectValue;

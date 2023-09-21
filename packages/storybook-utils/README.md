@@ -1,11 +1,11 @@
-# @devtools-ds/storybook-utils
+# @iampava-devtools-ds/storybook-utils
 
-Utilities for improving stories in the `@devtools-ds` storybook.
+Utilities for improving stories in the `@iampava-devtools-ds` storybook.
 
 ## Installation
 
 ```sh
-npm i @devtools-ds/storybook-utils
+npm i @iampava-devtools-ds/storybook-utils
 # or with yarn
-yarn add @devtools-ds/storybook-utils
+yarn add @iampava-devtools-ds/storybook-utils
 ```

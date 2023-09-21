@@ -1,6 +1,6 @@
 import React from "react";
 import { select } from "@storybook/addon-knobs";
-import { callback } from "@devtools-ds/storybook-utils";
+import { callback } from "@iampava-devtools-ds/storybook-utils";
 
 import {
   Console,

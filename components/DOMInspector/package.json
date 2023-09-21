@@ -1,5 +1,5 @@
 {
-  "name": "@devtools-ds/dom-inspector",
+  "name": "@iampava-devtools-ds/dom-inspector",
   "version": "1.2.1",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -30,9 +30,9 @@
   },
   "dependencies": {
     "@babel/runtime": "7.7.2",
-    "@devtools-ds/node": "link:../Node",
-    "@devtools-ds/themes": "link:../../packages/themes",
-    "@devtools-ds/tree": "link:../Tree",
+    "@iampava-devtools-ds/node": "link:../Node",
+    "@iampava-devtools-ds/themes": "link:../../packages/themes",
+    "@iampava-devtools-ds/tree": "link:../Tree",
     "clsx": "1.1.0"
   },
   "peerDependencies": {

@@ -1,5 +1,5 @@
 {
-  "name": "@devtools-ds/console",
+  "name": "@iampava-devtools-ds/console",
   "version": "1.2.1",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -30,13 +30,13 @@
   },
   "dependencies": {
     "@babel/runtime": "7.7.2",
-    "@devtools-ds/icon": "link:../Icon",
-    "@devtools-ds/object-inspector": "link:../ObjectInspector",
-    "@devtools-ds/themes": "link:../../packages/themes",
+    "@iampava-devtools-ds/icon": "link:../Icon",
+    "@iampava-devtools-ds/object-inspector": "link:../ObjectInspector",
+    "@iampava-devtools-ds/themes": "link:../../packages/themes",
     "clsx": "1.1.0"
   },
   "devDependencies": {
-    "@devtools-ds/storybook-utils": "link:../../packages/storybook-utils"
+    "@iampava-devtools-ds/storybook-utils": "link:../../packages/storybook-utils"
   },
   "peerDependencies": {
     "react": ">= 16.8.6"

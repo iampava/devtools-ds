@@ -1,4 +1,4 @@
-# @devtools-ds/port-controller
+# @iampava-devtools-ds/port-controller
 
 `PortController` is a simple class for managing browser `Runtime.Port` objects in the `background` script of your extension.
 
@@ -9,9 +9,9 @@ If you are developing an extension with a popup dialog or a devtools panel, they
 ## Installation
 
 ```sh
-npm i @devtools-ds/port-controller
+npm i @iampava-devtools-ds/port-controller
 # or with yarn
-yarn add @devtools-ds/port-controller
+yarn add @iampava-devtools-ds/port-controller
 ```
 
 ## Example
@@ -19,7 +19,7 @@ yarn add @devtools-ds/port-controller
 Here is an example `background` script using the port controller.
 
 ```ts
-import { PortController } from "@devtools-ds/port-controller";
+import { PortController } from "@iampava-devtools-ds/port-controller";
 
 const controller = new PortController<Message>();
 

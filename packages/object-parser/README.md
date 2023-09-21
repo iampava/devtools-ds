@@ -1,4 +1,4 @@
-# @devtools-ds/object-parser
+# @iampava-devtools-ds/object-parser
 
 Object parser is a utility used by the the `Object Inspector` package, which creates a JSON tree structure with node types that help simplify the JavaScript type system. It also uses TypeScript to make logic around using the tree strongly typed.
 
@@ -30,15 +30,15 @@ export type SupportedTypes =
 ## Installation
 
 ```sh
-npm i @devtools-ds/object-parser
+npm i @iampava-devtools-ds/object-parser
 # or with yarn
-yarn add @devtools-ds/object-parser
+yarn add @iampava-devtools-ds/object-parser
 ```
 
 ## Usage
 
 ```js
-import parse from "@devtools-ds/object-parser";
+import parse from "@iampava-devtools-ds/object-parser";
 
 const data = { foo: "bar" };
 const sortKeys = true;

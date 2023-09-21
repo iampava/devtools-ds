@@ -1,9 +1,9 @@
 import React from "react";
-import { ThemeableElement, useTheme } from "@devtools-ds/themes";
+import { ThemeableElement, useTheme } from "@iampava-devtools-ds/themes";
 import makeClass from "clsx";
 import { useId } from "@reach/auto-id";
 import { VisuallyHidden } from "@reach/visually-hidden";
-import { ConsoleErrorIcon, WarningIcon } from "@devtools-ds/icon";
+import { ConsoleErrorIcon, WarningIcon } from "@iampava-devtools-ds/icon";
 import { DiagnosticSeverity } from "vscode-languageserver-types";
 
 import styles from "./Diagnostic.css";
@@ -28,7 +28,7 @@ interface DiagnosticProps extends ThemeableElement<"figure"> {
   /** The lines of code to display */
   lines: DiagnosticLine[];
   /** Whether this is an error or a warning */
-  severity: Severity;
+  severity?: Severity;
   /** Message */
   message?: string;
 }
@@ -93,16 +93,11 @@ export const generateDescription = (
 };
 
 /** A component for displaying diagnostic stack traces. */
-export const Diagnostic = (props: DiagnosticProps) => {
-  const {
-    severity,
-    lines,
-    theme,
-    colorScheme,
-    className,
-    message,
-    ...html
-  } = props;
+export const Diagnostic = ({
+  severity = "warning",
+  ...rest
+}: DiagnosticProps) => {
+  const { lines, theme, colorScheme, className, message, ...html } = rest;
   const { themeClass } = useTheme({ theme, colorScheme }, styles);
   const captionId = `diagnostic-caption-${useId()}`;
 
@@ -143,8 +138,4 @@ export const Diagnostic = (props: DiagnosticProps) => {
       </VisuallyHidden>
     </figure>
   );
-};
-
-Diagnostic.defaultProps = {
-  severity: "warning",
 };

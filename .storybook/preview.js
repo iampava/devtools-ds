@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeDecorator } from "@devtools-ds/storybook-theme-addon";
+import { ThemeDecorator } from "@iampava-devtools-ds/storybook-theme-addon";
 import { themes as storybookThemes } from "@storybook/theming";
 import { makeDecorator } from "@storybook/addons";
 import { text } from "@storybook/addon-knobs";

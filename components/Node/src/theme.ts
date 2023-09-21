@@ -1,4 +1,4 @@
-import { ComponentTheme, chrome, firefox } from "@devtools-ds/themes";
+import { ComponentTheme, chrome, firefox } from "@iampava-devtools-ds/themes";
 
 const NodeTheme = (): ComponentTheme => ({
   firefox: {
