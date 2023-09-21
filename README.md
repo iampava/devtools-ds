@@ -1,3 +1,5 @@
+> ❗️ This is a forked package, with the goal of removing the deprecated React `defaultProps` feature in favor of native default props.
+
 <div align="center">
   <img
     src=".storybook/devtools-ds-logo.svg"
